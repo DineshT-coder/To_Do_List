@@ -1,0 +1,117 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: url('bg.webp') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+header, footer {
+    background: rgb(63,94,251);
+    background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(206,0,255,1) 100%);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 0px;
+    position: sticky;
+    font-weight: bold;
+    
+}
+
+header {
+    top: 0;
+    z-index: 1000;
+}
+
+footer {
+    bottom: 0;
+    margin-top: auto;
+}
+
+/* Main Content */
+main {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.task-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+input#taskInput {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    max-width: 70%;
+    min-width: 200px;
+    border-radius: 10px;
+}
+
+button#saveButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #28a745; 
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+p#errorMessage {
+    color: red;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+p.hidden {
+    display: none;
+}
+
+ol#taskList {
+    width: 100%;
+    max-width: 800px;
+    padding-left: 20px;
+}
+
+li {
+    background-color: white;
+    padding: 10px;
+    margin: 5px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+li.completed span {
+    text-decoration: line-through;
+    color: rgb(38, 165, 53);
+}
+
+button {
+    cursor: pointer;
+}
+
+
+@media (max-width: 768px) {
+    input#taskInput {
+        width: 80%;
+    }
+    
+    ol#taskList {
+        padding: 0 10px;
+    }
+}
+
